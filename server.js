@@ -7,8 +7,8 @@ var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 var logger = require('morgan');
 var path = require('path');
-var db = require('/db.js');
-var pg = require('pg');
+var db = require('./db.js');
+
 
 app.listen(3000);
 
@@ -16,9 +16,9 @@ app.engine('handlebars', exphbs({defaultLayout: 'main', extname: 'handlebars'}))
 app.set('views', path.join(root, 'views'));
 app.set('view engine', 'handlebars');
 
-app.user(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded());
 app.use(express.static('public'));
-app.user(logger('dev'));
+app.use(logger('dev'));
 
 app.use(methodOverride(function (req, res) {
 	if (req.body && typeof req.body === 'object' && '_method' in req.body) {

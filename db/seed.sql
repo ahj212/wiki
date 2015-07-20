@@ -1,41 +1,17 @@
-INSERT INTO users (user_name, password, email, create_date) VALUES ();
+--USERS DB
+INSERT INTO users (user_name, password, email) VALUES ('admin', '12345', 'ahj212@gmail.com');
 
-INSERT INTO categories (category_name, user_id) VALUES ();
+--CATEGORIES DB
+INSERT INTO categories (category_name, user_id) VALUES ('Central Texas', 1);
+INSERT INTO categories (category_name, user_id) VALUES ('East Texas', 1);
+INSERT INTO categories (category_name, user_id) VALUES ('South Texas', 1);
 
-INSERT INTO articles (article_name, article_content, article_posting_date, article_posting_updated, category_id, user_id) VALUES ();
+--ARTICLES DB
+INSERT INTO articles (article_name, article_content, category_id, user_id) VALUES ('Brisket', 'This is an article about brisket.', 1, 1);
+INSERT INTO articles (article_name, article_content, category_id, user_id) VALUES ('Central Texas dry rub', 'This is an article about central Texas dry rub.', 1, 1);
+INSERT INTO articles (article_name, article_content, category_id, user_id) VALUES ('Pulled Pork', 'This is an article about pulled pork.', 2, 1);
+INSERT INTO articles (article_name, article_content, category_id, user_id) VALUES ('East Texas BBQ sauce', 'This is an article about East Texas barbecue sauce.', 2, 1);
+INSERT INTO articles (article_name, article_content, category_id, user_id) VALUES ('Barbacoa', 'This is an article about brisket', 3, 1);
 
-INSERT INTO comments (comment_name, comment_content, comment_posting_date, comment_posting_updated, article_id, user_id) VALUES ();
-
-CREATE TABLE users(
-	id SERIAL PRIMARY KEY,
-	user_name VARCHAR(255),
-	password VARCHAR(255),
-	email VARCHAR(255),
-	create_date DATE,
-);
-
-CREATE TABLE categories(
-	id SERIAL PRIMARY KEY,
-	category_name VARCHAR(255),
-	user_id INTEGER references users
-);
-
-CREATE TABLE articles(
-	id SERIAL PRIMARY KEY,
-	article_name VARCHAR(255),
-	article_content TEXT,
-	article_posting_date DATE,
-	article_posting_updated DATE,
-	category_id INTEGER references categories,
-	user_id INTEGER references users
-);
-
-CREATE TABLE comments(
-	id SERIAL PRIMARY KEY,
-	comment_name VARCHAR(255),
-	comment_content TEXT,
-	comment_posting_date DATE,
-	comment_posting_updated DATE,
-	article_id INTEGER references articles,
-	user_id INTEGER references users
-);
+--COMMENTS DB
+INSERT INTO comments (comment_content, article_id, user_id) VALUES ('First!', 1, 1);

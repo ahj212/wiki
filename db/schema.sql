@@ -3,36 +3,33 @@ DROP TABLE IF EXISTS categories CASCADE;
 DROP TABLE IF EXISTS articles CASCADE;
 DROP TABLE IF EXISTS comments CASCADE;
 
-CREATE TABLE users(
+CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
 	user_name VARCHAR(255),
 	password VARCHAR(255),
 	email VARCHAR(255),
-	create_date DATE,
+	timestamp timestamp default current_timestamp
 );
 
-CREATE TABLE categories(
+CREATE TABLE categories (
 	id SERIAL PRIMARY KEY,
 	category_name VARCHAR(255),
 	user_id INTEGER references users
 );
 
-CREATE TABLE articles(
+CREATE TABLE articles (
 	id SERIAL PRIMARY KEY,
 	article_name VARCHAR(255),
 	article_content TEXT,
-	article_posting_date DATE,
-	article_posting_updated DATE,
+	timestamp timestamp default current_timestamp,
 	category_id INTEGER references categories,
 	user_id INTEGER references users
 );
 
-CREATE TABLE comments(
+CREATE TABLE comments (
 	id SERIAL PRIMARY KEY,
-	comment_name VARCHAR(255),
 	comment_content TEXT,
-	comment_posting_date DATE,
-	comment_posting_updated DATE,
+	timestamp timestamp default current_timestamp,
 	article_id INTEGER references articles,
 	user_id INTEGER references users
 );

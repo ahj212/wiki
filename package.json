@@ -1,0 +1,29 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "GA_project_02",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahj212/wiki.git"
+  },
+  "author": "hwan_ho_jeoung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahj212/wiki/issues"
+  },
+  "homepage": "https://github.com/ahj212/wiki#readme",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "express-handlebars": "^2.0.1",
+    "method-override": "^2.3.4",
+    "morgan": "^1.6.1",
+    "path": "^0.11.14",
+    "pg": "^4.4.0"
+  }
+}

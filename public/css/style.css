@@ -1,32 +1,83 @@
 body {
-	margin: 0;
-	color: white;
-	background-color: black;
+	margin : 0;
+	color : white;
+	background-color : black;
+	font-size: 20px;
 }
 
-#header {
-	padding: 15px;
-}
-
-h1 {
-	
-}
-
-h1 a {
-	font-family: 'Ubuntu Condensed', sans-serif;
-	color: white;
-	font-size: 80px;
+a {
+	color : white;
 	text-decoration: none;
 }
 
-#signIn {
-	float: right;
-	margin: 10px;
+/*logo*/
+#header {
+	font-family : 'Ubuntu Condensed', sans-serif;
+	color : white;
+	font-size : 50px;
+	text-decoration : none;
+	margin: 0;
 }
 
-#register {
-	float: right;
-	margin: 10px;
+#header h1 {
+	margin: 15px;
+}
+
+/*login nav*/
+#login {
+    list-style-type : none;
+    margin : 0;
+    padding : 0;
+}
+
+#login li {
+    display : inline;
+    float : right;
+    margin-right : 20px;
+    font-size: 25px;
+}
+
+#login li a {
+	text-decoration : none;
+	color : white;
+	display: block;
+    width: 80px;
+}
+
+/*navigation bar*/
+#nav {
+	float : right;
+	display : inline;
+    margin : 0px;
+    padding : 0;
+    width: 195px;
+}
+
+#nav li {
+    display : inline;
+    margin : 30px;
+    font-size: 25px;
+}
+
+#nav li a {
+	text-decoration : none;
+	color : white;
+	display: block;
+    width: 80px;	
+}
+
+.pageDescription {
+	margin-left : 25px;
+}
+
+/*article*/
+
+#createCategory {
+
+}
+
+#createArticle {
+
 }
 
 hr {
@@ -34,7 +85,14 @@ hr {
 }
 
 #nav {
-	margin-left: 50px;
-	width: 400px;
-	float: left;
+}
+
+.container {
+	margin-left : 100px;
+	width : 800px;
+	height : 100%;
+}
+
+.article {
+
 }

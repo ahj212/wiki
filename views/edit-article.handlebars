@@ -1,1 +1,14 @@
-<h1>This is the edit article route</h1>
+<h1>Edit Article</h1>
+
+<form action="/update-article/{{id}}" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+
+	<input type="text" name="article_name" placeholder="Article name" value="{{article_name}}">
+	<input type="text" name="article_content" placeholder="Article content" value="{{article_content}}">
+	<input type="text" name="parent_category" placeholder="Parent category" value="{{parent_category}}">
+	<input type="text" name="article_author" placeholder="Article author" value="{{article_author}}">
+	<br>
+	<br>
+	<input type="submit" value="Update">
+</form>
+

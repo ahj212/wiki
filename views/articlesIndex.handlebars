@@ -1,1 +1,20 @@
-<h1>this is the article index route</h1>
+<div id="container">
+	{{#each articles}}
+		<div class="article">
+			<h2><a href="/articles/{{id}}">Article # {{id}}</a></h2>
+			<p>Date created : {{timestamp}}</p>
+			<p>Created by user : {{article_author}}</p>
+			<p>Category : {{parent_category}}</p>
+			<p>{{article_content}}</p>
+			
+			<form action="/edit-article/{{id}}" method="GET">
+				<input type="submit" value="EDIT">
+			</form>
+
+			<form action="/delete-article/{{id}}" method="POST">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="submit" value="DELETE">
+			</form>
+		</div>
+	{{/each}}
+</div>

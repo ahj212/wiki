@@ -9,9 +9,6 @@ var logger = require('morgan');
 var path = require('path');
 var db = require('./db.js');
 
-
-app.listen(3000);
-
 app.engine('handlebars', exphbs({defaultLayout: 'main', extname: 'handlebars'}));
 app.set('views', path.join(root, 'views'));
 app.set('view engine', 'handlebars');

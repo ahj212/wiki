@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	color: white;
+	background-color: black;
+}
+
+#header {
+	padding: 15px;
+}
+
+h1 {
+	
+}
+
+h1 a {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: white;
+	font-size: 80px;
+	text-decoration: none;
+}
+
+#signIn {
+	float: right;
+	margin: 10px;
+}
+
+#register {
+	float: right;
+	margin: 10px;
+}
+
+hr {
+	margin-top: 0px;
+}
+
+#nav {
+	margin-left: 50px;
+	width: 400px;
+	float: left;
+}

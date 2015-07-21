@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var express = require('express');
 var app = express();
 var fs = require('fs');
@@ -41,7 +40,7 @@ fs.readdirSync('./controllers').forEach(function (file) {
 app.get('/', function (req, res) {
 	res.render('home');
 });
-=======
+
 //loading npm
 var express = require('express');
 var logger = require('morgan');
@@ -228,4 +227,3 @@ app.post('/create-category', function (req, res) {
 // U: Update, has no render, PUT '/artists/:id'
 // D: Delete, has no render, DELETE '/artists/:id'
 
->>>>>>> fc7f79c7174d7e613949cbe04b5162fd60c80ce4
